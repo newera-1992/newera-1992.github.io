@@ -1458,6 +1458,7 @@ footer.ty-footer {
 }
 
 /*
+  typora软件的相关修改: 
     typora导出 html后，使目录漂浮到右上角的css
     注意typora主题配色修改 (本例基于 night主题修改):
       - typora目录
@@ -1478,6 +1479,10 @@ footer.ty-footer {
 */
 .md-toc {
   /*
+    导出后html的相关修改: 
+      - 假如页面两条杠, 删除一个<hr />
+      - 修改漂浮目录第一行为 “目录：”
+      - 参数说明: 
         position: fixed // 表示漂浮出来, 脱离于整个文档;
         z-index: 8192 // 数字越大越置顶, 依赖于 position属性;
         top: 16px; // 脱离盒子模型的全屏上边距
