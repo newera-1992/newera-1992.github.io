@@ -1220,7 +1220,7 @@ body {
     <span class="pl-ent">"show_syntax"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"ui_scale"</span>: <span class="pl-c1">0.0</span>,
     <span class="pl-ent">"hardware_acceleration"</span>: <span class="pl-s"><span class="pl-pds">"</span>none<span class="pl-pds">"</span></span>,
-    <span class="pl-ent">"hot_exit"</span>: <span class="pl-s"><span class="pl-pds">"</span>disabled<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"hot_exit"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"remember_full_screen"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"remember_workspace"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"shell_environment"</span>: <span class="pl-c1">true</span>,
@@ -1263,7 +1263,8 @@ body {
 <p>实用插件列表</p>
 </blockquote>
 <p>安装方式：<code>ctrl + shift + p / 输入 install package / 输入插件名</code></p>
-<p>注：如果遇到安装问题，一般是 GFW问题，需要自定义一个 channel_v3，搜索一下。</p>
+<p>注：（不推荐）如果遇到安装问题，一般是 GFW问题，需要自定义一个 channel_v3，搜索一下。</p>
+<p>但这个方法一旦使用的话，下次安装插件或更新时，记得先更新一下 channel_v3</p>
 <table>
 <thead>
 <tr>
@@ -1323,18 +1324,10 @@ body {
 </tbody>
 </table>
 <hr>
-<h3><a id="user-content-插件优化设置" class="anchor" aria-hidden="true" href="#插件优化设置"><span aria-hidden="true" class="octicon octicon-link"></span></a>插件优化设置</h3>
+<h3><a id="user-content-插件设置" class="anchor" aria-hidden="true" href="#插件设置"><span aria-hidden="true" class="octicon octicon-link"></span></a>插件设置</h3>
 <blockquote>
-<p>插件的参数设置与快捷键设置</p>
+<p>插件的参数设置</p>
 </blockquote>
-<ul>
-<li>MarkdownPreview</li>
-</ul>
-<p>用法：ctrl+shift+p, 输入：Markdown Preview, 选择 save to html 或者 preview in browser</p>
-<ul>
-<li>CSS Format</li>
-</ul>
-<p>用法：ctrl+alt+[（展开）、ctrl+alt+]（压缩成一行）</p>
 <ul>
 <li>ExportHTML</li>
 </ul>
@@ -1443,34 +1436,6 @@ body {
     <span class="pl-ent">"use_sub_notify"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"valid_selection_size"</span>: <span class="pl-c1">4</span>
 }</pre></div>
-<p>用法：ctrl+shift+p, 输入：export, 选择 show export menu</p>
-<ul>
-<li>GenerateUUID</li>
-</ul>
-<p>用法：ctrl+shift+u</p>
-<ul>
-<li>JsFormat</li>
-</ul>
-<blockquote>
-<p>由于与 sql格式华那个插件按键冲突，将其改成：ctrl+alt+j，配置代码在后面快捷键配置部分</p>
-</blockquote>
-<blockquote>
-<p>js大文件可能会延迟一下才看到效果</p>
-</blockquote>
-<p>用法：ctrl+alt+j</p>
-<ul>
-<li>Indent XML</li>
-</ul>
-<p>安装：发现索引里面没有了，需要手动去 github.com/alek-sys/sublimetext_indentxml
-一、解压包含目录到：<code>sublime\Data\Packages</code>
-二、重新打开即可使用：ctrl+k,f</p>
-<ul>
-<li>Random Text</li>
-</ul>
-<blockquote>
-<p>默认大小字母数字字符32位，可设置</p>
-</blockquote>
-<p>用法：ctrl+shift+r</p>
 <ul>
 <li>Timenow</li>
 </ul>
@@ -1478,10 +1443,6 @@ body {
 <div class="highlight highlight-source-json"><pre>{
   <span class="pl-ent">"date_format"</span>: <span class="pl-s"><span class="pl-pds">"</span>%Y-%m-%d %H:%M:%S<span class="pl-pds">"</span></span>
 }</pre></div>
-<ul>
-<li>uroboroSQL Formatter</li>
-</ul>
-<p>用法：ctrl+alt+f</p>
 <ul>
 <li>ConvertToUTF8</li>
 </ul>
@@ -1504,6 +1465,9 @@ body {
 }</pre></div>
 <hr>
 <h3><a id="user-content-快捷键配置" class="anchor" aria-hidden="true" href="#快捷键配置"><span aria-hidden="true" class="octicon octicon-link"></span></a>快捷键配置</h3>
+<blockquote>
+<p>JS格式化是与 SQL冲突、CSS格式化需要选择多项，所以修改默认值</p>
+</blockquote>
 <p>路径：<code>Perfercense &gt; Key Bindings</code></p>
 <p>粘贴到右边的用户设置框</p>
 <div class="highlight highlight-source-json"><pre>[
@@ -1526,6 +1490,61 @@ body {
         }
     }
 ]</pre></div>
+<hr>
+<h3><a id="user-content-插件用法" class="anchor" aria-hidden="true" href="#插件用法"><span aria-hidden="true" class="octicon octicon-link"></span></a>插件用法</h3>
+<ul>
+<li>MarkdownPreview</li>
+</ul>
+<p>用法：ctrl+shift+p, 输入：Markdown Preview, 选择 save to html 或者 preview in browser</p>
+<ul>
+<li>CSS Format</li>
+</ul>
+<p>用法：ctrl+alt+[（展开）、ctrl+alt+]（压缩成一行）</p>
+<ul>
+<li>ExportHTML</li>
+</ul>
+<p>用法：ctrl+shift+p, 输入：export, 选择 show export menu</p>
+<ul>
+<li>GenerateUUID</li>
+</ul>
+<p>用法：ctrl+shift+u</p>
+<ul>
+<li>JsFormat</li>
+</ul>
+<blockquote>
+<p>由于与 sql格式华那个插件按键冲突，将其改成：ctrl+alt+j，配置代码在后面快捷键配置部分</p>
+</blockquote>
+<blockquote>
+<p>js大文件可能会延迟一下才看到效果</p>
+</blockquote>
+<p>用法：ctrl+alt+j</p>
+<ul>
+<li>Indent XML</li>
+</ul>
+<p>注：如果正常能搜索到的就直接从 ctrl+shift+p 安装就好了</p>
+<p>安装：发现索引里面没有了，需要手动去 github.com/alek-sys/sublimetext_indentxml</p>
+<p>一、解压包含目录到：<code>sublime\Data\Packages</code></p>
+<p>二、用法：ctrl+k,f</p>
+<ul>
+<li>Random Text</li>
+</ul>
+<blockquote>
+<p>默认大小字母数字字符32位，可设置</p>
+</blockquote>
+<p>用法：ctrl+shift+r</p>
+<ul>
+<li>Timenow</li>
+</ul>
+<p>用法：ctrl+t</p>
+<ul>
+<li>uroboroSQL Formatter</li>
+</ul>
+<p>用法：ctrl+alt+f</p>
+<ul>
+<li>ConvertToUTF8</li>
+</ul>
+<p>用法：ctrl+shift+c</p>
+<p>注：大文件可能会延迟一下才看到效果</p>
 <hr>
 <h3><a id="user-content-备份打包" class="anchor" aria-hidden="true" href="#备份打包"><span aria-hidden="true" class="octicon octicon-link"></span></a>备份打包</h3>
 <blockquote>
