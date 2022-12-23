@@ -977,38 +977,61 @@ body .markdown-body {
 .markdown-body .pl-12 {
   padding-left: 128px!important;
 }
+/*
+    适用: Sublime/MarkdownPreview > Save to HTML;
+    (主题风格参考: Sublime/Mariana)
+*/
+  /*
+    1. 原始HTML修改
+  */
+    /* 全局背景、字色 */
     html,
-    body {
-      background-color: #008080;
-    }
-    /* .toc {
-      position: fixed;
-      z-index: 256;
-      top: 1%;
-      right: 1%;
-      border-radius: 16px;
-      width: 320px;
-      height: 256px;
-      background-color: #077;
-    } */
+    body,
     .markdown-body {
-      color: #fff;
+      background-color: #343d46;
+      color: #d8dee9;
     }
+    /* 取消一级标题自带下划线 */
+    .markdown-body h1,
+    .markdown-body h2 {
+      border-bottom: 0px;
+      padding-bottom: 0em;
+    }
+    /* 取消url下划线 */
+    a,
+    a:hover,
     .markdown-body a {
-      color: #fff;
+      color: #d8dee9;
+      text-decoration: none;
     }
+    .markdown-body a:hover {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bolder;
+    }
+    /* 代码块背景 */
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      background-color: #3d4851;
+    }
+    /* 引用颜色 */
+    .markdown-body blockquote {
+      color: #a6acb9;
+    }
+    /* 表格风格 */
     .markdown-body table tr {
-      background-color: #008080;
+      background-color: #343d46;
     }
     .markdown-body table tr:nth-child(2n) {
-      background-color: #008080;
+      background-color: #343d46;
     }
-    .markdown-body blockquote {
-      color: #999;
+    /* 代码块语法高亮 */
+    .markdown-body .pl-c {
+      color: #a6acb9;
     }
-    .markdown-body .pl-c1,
-    .markdown-body .pl-s .pl-v {
-      color: #99c;
+    .markdown-body .pl-s .pl-s1,
+    .markdown-body .pl-smi {
+      color: #c695c6;
     }
     .markdown-body .pl-pds,
     .markdown-body .pl-s,
@@ -1017,86 +1040,80 @@ body .markdown-body {
     .markdown-body .pl-sr .pl-cce,
     .markdown-body .pl-sr .pl-sra,
     .markdown-body .pl-sr .pl-sre {
-      color: #9c9;
-    }
-    .markdown-body {
-      color: #ccc;
-    }
-    .markdown-body a {
-      color: #ccc;
-    }
-    .markdown-body .pl-s .pl-s1,
-    .markdown-body .pl-smi {
-      color: #ccc;
-    }
-    .markdown-body .pl-smw,
-    .markdown-body .pl-v {
-      color: #cc9;
-    }
-    .markdown-body .pl-k {
-      color: #f99;
+      color: #99c794;
     }
     .markdown-body .pl-e,
     .markdown-body .pl-en {
-      color: #99c;
+      color: #6699cc;
     }
-    .markdown-body .codehilite pre, .markdown-body .highlight pre, .markdown-body pre {
-      background-color: #055;
+    .markdown-body .pl-c1,
+    .markdown-body .pl-s .pl-v {
+      color: #6699cc;
     }
-    .markdown-body .highlight pre,
-    .markdown-body pre {
-      font-size: 100%;
+    .markdown-body .pl-smw,
+    .markdown-body .pl-v {
+      color: #c695c6;
     }
-    /* * {
-      margin: 0px;
-      padding: 0px;
-    } */
-    html,
-    body {
-      background-color: #088;
+    .markdown-body .pl-k {
+      color: #ec6066;
     }
+  /*
+      2. toc风格修改
+  */
+    /*
+        toc风格
+          position: fixed表示脱离文档, 不受滑动条影响;
+          z-index: 置顶优先级, 数字越大越在上面;
+          border-radius: 圆角孤度;
+          background-color: rgb第4个参数是透明度, rgb方式比较好, 文字不透;
+    */
     #toc {
       position: fixed;
       z-index: 256;
-      top: 1%;
-      right: 1%;
+      top: 2%;
+      right: 2%;
       border-radius: 16px;
       width: 256px;
-      height: 360px;
-      background-color: rgb(0,128,128,0.5);
+      height: 256px;
+      background-color: rgb(78,89,98,0.8);
     }
-    #right-toc {
+    /* toc大标题居中 */
+    #toc-title {
       text-align: center;
-      color: #ccc;
+      color: #d8dee9;
     }
-    /* .li-hr {
-      width: 100%;
-      height: 5px;
-    } */
+    /* toc中分隔线风格 */
+    .li-hr {
+      margin-left: 14%;
+      margin-bottom: 4%;
+      width: 70%;
+      height: 4px;
+      background-color: #e1e4e8;
+    }
+    /* url风格 */
     .a-li:-webkit-any-link {
-      color: #ccc;
+      color: #e1e4e8;
       cursor: pointer;
       text-decoration: none;
-      margin-left: 25%;
+      margin-left: 18%;
       font-size: 18px;
     }
+    /* 滑过高亮 */
     .a-li:-webkit-any-link:hover {
-        color: #0ff;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
 </style><title>sublime_doc</title></head><body><article class="markdown-body"><h1><a id="user-content-sublime-settings" class="anchor" aria-hidden="true" href="#sublime-settings"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sublime Settings</h1>
   <div id="toc">
-    <h3 id="right-toc">其它文档列表</h3>
-    <!-- <div class="li-hr"></div>
+    <h3 id="toc-title">其它文档列表</h3>
     <div class="li-hr"></div>
-    <div class="li-hr"></div> -->
-    <p><a class="a-li" href="index.html">sublime settings></a></p>
-    <p><a class="a-li" href="vscode_doc.html">vscode settings></a></p>
-    <p><a class="a-li" href="#">ideaJ settings(X)</a></p>
-    <p><a class="a-li" href="#">pycharm settings(X)</a></p>
-    <p><a class="a-li" href="#">clion settings(X)</a></p>
-    <p><a class="a-li" href="#">goland settings(X)</a></p>
-    <p><a class="a-li" href="#">webstorm settings(X)</a></p>
+    <p><a class="a-li" href="index.html">sublime_settings</a></p>
+    <p><a class="a-li" href="vscode_doc.html">vscode_settings</a></p>
+    <p><a class="a-li" href="#">a3f1-6a095cf2fcf0</a></p>
+    <p><a class="a-li" href="#">b07d-6aec2cc89499</a></p>
   </div>
+<hr>
 <h3><a id="user-content-下载便携版本" class="anchor" aria-hidden="true" href="#下载便携版本"><span aria-hidden="true" class="octicon octicon-link"></span></a>下载便携版本</h3>
 <blockquote>
 <p>便携版本好处是整个目录打包即可打包所装插件、与全部配置</p>
@@ -1245,8 +1262,8 @@ body .markdown-body {
     <span class="pl-ent">"auto_complete_selector"</span>: <span class="pl-s"><span class="pl-pds">"</span>meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"auto_complete_triggers"</span>:
     [
-        {<span class="pl-ent">"selector"</span>: <span class="pl-s"><span class="pl-pds">"</span>text.html, text.xml<span class="pl-pds">"</span></span>, <span class="pl-ent">"characters"</span>: <span class="pl-s"><span class="pl-pds">"</span>&lt;<span class="pl-pds">"</span></span><span class="pl-ii">,</span>},
-        {<span class="pl-ent">"selector"</span>: <span class="pl-s"><span class="pl-pds">"</span>punctuation.accessor<span class="pl-pds">"</span></span>, <span class="pl-ent">"rhs_empty"</span>: <span class="pl-c1">true</span><span class="pl-ii">,</span>},
+        {<span class="pl-ent">"selector"</span>: <span class="pl-s"><span class="pl-pds">"</span>text.html, text.xml<span class="pl-pds">"</span></span>, <span class="pl-ent">"characters"</span>: <span class="pl-s"><span class="pl-pds">"</span>&lt;<span class="pl-pds">"</span></span>},
+        {<span class="pl-ent">"selector"</span>: <span class="pl-s"><span class="pl-pds">"</span>punctuation.accessor<span class="pl-pds">"</span></span>, <span class="pl-ent">"rhs_empty"</span>: <span class="pl-c1">true</span>}
     ],
     <span class="pl-ent">"auto_complete_commit_on_tab"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"auto_complete_with_fields"</span>: <span class="pl-c1">false</span>,
@@ -1640,6 +1657,7 @@ body .markdown-body {
 <p>便携版打包整个解压目录即可</p>
 </blockquote>
 <p>注：如果是安装版, <code>%UserProfile%</code> 路径下是设置文件, 和软件目录是分离的。</p>
+<hr>
 <h3><a id="user-content-contact" class="anchor" aria-hidden="true" href="#contact"><span aria-hidden="true" class="octicon octicon-link"></span></a>contact</h3>
 <blockquote>
 <p>feedback</p>
