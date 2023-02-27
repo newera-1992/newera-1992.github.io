@@ -977,6 +977,10 @@ body .markdown-body {
 .markdown-body .pl-12 {
   padding-left: 128px!important;
 }
+/*
+    适用: Sublime/MarkdownPreview > Save to HTML;
+    (主题风格参考: Sublime/Mariana)
+*/
   /*
     1. 原始HTML修改
   */
@@ -1100,16 +1104,16 @@ body .markdown-body {
       text-decoration: none;
       font-weight: bold;
     }
-</style><title>sublime_doc</title></head><body><article class="markdown-body"><h1><a id="user-content-sublime-settings" class="anchor" aria-hidden="true" href="#sublime-settings"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sublime Settings</h1>
+</style><title>Sublime Settings</title></head><body><article class="markdown-body"><h1><a id="user-content-sublime-settings" class="anchor" aria-hidden="true" href="#sublime-settings"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sublime Settings</h1>
+  <div id="toc">
+    <h3 id="toc-title">其它文档列表</h3>
+    <div class="li-hr"></div>
+    <p><a class="a-li" href="index.html">Sublime Settings</a></p>
+    <p><a class="a-li" href="vscode_doc.html">VSCode Settings</a></p>
+    <p><a class="a-li" href="#">a3f1-6a095cf2fcf0</a></p>
+    <p><a class="a-li" href="#">b07d-6aec2cc89499</a></p>
+  </div>
 <hr>
-    <div id="toc">
-      <h3 id="toc-title">其它文档列表</h3>
-      <div class="li-hr"></div>
-      <p><a class="a-li" href="sublime_doc.html">Sublime Settings</a></p>
-      <p><a class="a-li" href="vscode_doc.html">VSCode Settings</a></p>
-      <p><a class="a-li" href="#">a3f1-6a095cf2fcf0</a></p>
-      <p><a class="a-li" href="#">b07d-6aec2cc89499</a></p>
-    </div>
 <h3><a id="user-content-一版本下载" class="anchor" aria-hidden="true" href="#一版本下载"><span aria-hidden="true" class="octicon octicon-link"></span></a>一、版本下载</h3>
 <blockquote>
 <p>推荐下载 Portable 便携版本</p>
@@ -1166,8 +1170,12 @@ body .markdown-body {
 <td>...</td>
 </tr>
 <tr>
+<td>color</td>
+<td>Mariana</td>
+</tr>
+<tr>
 <td>theme</td>
-<td>Mariana //Similar to monokai, But the contrast is lower and the eyes are more comfortable</td>
+<td>Dark</td>
 </tr>
 <tr>
 <td>history</td>
@@ -1188,7 +1196,7 @@ body .markdown-body {
 </ul>
 <p>完整替换: Perferences &gt; Settings</p>
 <div class="highlight highlight-source-json"><pre>{
-    <span class="pl-ent">"color_scheme"</span>: <span class="pl-s"><span class="pl-pds">"</span>Packages/Color Scheme - Default/Mariana.sublime-color-scheme<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"color_scheme"</span>: <span class="pl-s"><span class="pl-pds">"</span>Mariana.sublime-color-scheme<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"light_color_scheme"</span>: <span class="pl-s"><span class="pl-pds">"</span>Breakers.sublime-color-scheme<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"dark_color_scheme"</span>: <span class="pl-s"><span class="pl-pds">"</span>Mariana.sublime-color-scheme<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"font_face"</span>: <span class="pl-s"><span class="pl-pds">"</span>Consolas<span class="pl-pds">"</span></span>,
@@ -1196,6 +1204,7 @@ body .markdown-body {
     <span class="pl-ent">"font_options"</span>: [],
     <span class="pl-ent">"theme_font_options"</span>: [],
     <span class="pl-ent">"word_separators"</span>: <span class="pl-s"><span class="pl-pds">"</span>./<span class="pl-cce">\\</span>()<span class="pl-cce">\"</span>'-:,.;&lt;&gt;~!@#$%^&amp;*|+=[]{}`~?<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"sub_word_separators"</span>: <span class="pl-s"><span class="pl-pds">"</span>_<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"line_numbers"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"gutter"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"margin"</span>: <span class="pl-c1">4</span>,
@@ -1203,6 +1212,7 @@ body .markdown-body {
     <span class="pl-ent">"fade_fold_buttons"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"mini_diff"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"rulers"</span>: [],
+    <span class="pl-ent">"ruler_style"</span>: <span class="pl-s"><span class="pl-pds">"</span>dotted<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"spell_check"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"tab_size"</span>: <span class="pl-c1">4</span>,
     <span class="pl-ent">"translate_tabs_to_spaces"</span>: <span class="pl-c1">true</span>,
@@ -1222,8 +1232,9 @@ body .markdown-body {
     <span class="pl-ent">"dictionary"</span>: <span class="pl-s"><span class="pl-pds">"</span>Packages/Language - English/en_US.dic<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"spelling_selector"</span>: <span class="pl-s"><span class="pl-pds">"</span>markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag)<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"draw_minimap_border"</span>: <span class="pl-c1">false</span>,
-    <span class="pl-ent">"always_show_minimap_viewport"</span>: <span class="pl-c1">false</span>,
-    <span class="pl-ent">"highlight_line"</span>: <span class="pl-c1">false</span>,
+    <span class="pl-ent">"always_show_minimap_viewport"</span>: <span class="pl-c1">true</span>,
+    <span class="pl-ent">"minimap_horizontal_scrolling"</span>: <span class="pl-c1">true</span>,
+    <span class="pl-ent">"highlight_line"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"highlight_gutter"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"highlight_line_number"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"caret_style"</span>: <span class="pl-s"><span class="pl-pds">"</span>solid<span class="pl-pds">"</span></span>,
@@ -1245,6 +1256,7 @@ body .markdown-body {
     <span class="pl-ent">"move_to_limit_on_up_down"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"draw_white_space"</span>: [<span class="pl-s"><span class="pl-pds">"</span>selection<span class="pl-pds">"</span></span>],
     <span class="pl-ent">"draw_unicode_white_space"</span>: <span class="pl-s"><span class="pl-pds">"</span>punctuation<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"draw_unicode_bidi"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"control_character_style"</span>: <span class="pl-s"><span class="pl-pds">"</span>hex<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"selection_description_column_type"</span>: <span class="pl-s"><span class="pl-pds">"</span>virtual<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"draw_indent_guides"</span>: <span class="pl-c1">true</span>,
@@ -1253,7 +1265,7 @@ body .markdown-body {
     <span class="pl-ent">"trim_only_modified_white_space"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"ensure_newline_at_eof_on_save"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"save_on_focus_lost"</span>: <span class="pl-c1">false</span>,
-    <span class="pl-ent">"fallback_encoding"</span>: <span class="pl-s"><span class="pl-pds">"</span>UTF-8<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"fallback_encoding"</span>: <span class="pl-s"><span class="pl-pds">"</span>Western (Windows 1252)<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"default_encoding"</span>: <span class="pl-s"><span class="pl-pds">"</span>UTF-8<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"enable_hexadecimal_encoding"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"default_line_ending"</span>: <span class="pl-s"><span class="pl-pds">"</span>unix<span class="pl-pds">"</span></span>,
@@ -1261,12 +1273,12 @@ body .markdown-body {
     <span class="pl-ent">"tab_completion"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"auto_complete"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"auto_complete_size_limit"</span>: <span class="pl-c1">4194304</span>,
-    <span class="pl-ent">"auto_complete_delay"</span>: <span class="pl-c1">1</span>,
+    <span class="pl-ent">"auto_complete_delay"</span>: <span class="pl-c1">50</span>,
     <span class="pl-ent">"auto_complete_selector"</span>: <span class="pl-s"><span class="pl-pds">"</span>meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"auto_complete_triggers"</span>:
     [
-        {<span class="pl-ent">"selector"</span>: <span class="pl-s"><span class="pl-pds">"</span>text.html, text.xml<span class="pl-pds">"</span></span>, <span class="pl-ent">"characters"</span>: <span class="pl-s"><span class="pl-pds">"</span>&lt;<span class="pl-pds">"</span></span>},
-        {<span class="pl-ent">"selector"</span>: <span class="pl-s"><span class="pl-pds">"</span>punctuation.accessor<span class="pl-pds">"</span></span>, <span class="pl-ent">"rhs_empty"</span>: <span class="pl-c1">true</span>}
+        {<span class="pl-ent">"selector"</span>: <span class="pl-s"><span class="pl-pds">"</span>text.html, text.xml<span class="pl-pds">"</span></span>, <span class="pl-ent">"characters"</span>: <span class="pl-s"><span class="pl-pds">"</span>&lt;<span class="pl-pds">"</span></span><span class="pl-ii">,</span>},
+        {<span class="pl-ent">"selector"</span>: <span class="pl-s"><span class="pl-pds">"</span>punctuation.accessor<span class="pl-pds">"</span></span>, <span class="pl-ent">"rhs_empty"</span>: <span class="pl-c1">true</span><span class="pl-ii">,</span>},
     ],
     <span class="pl-ent">"auto_complete_commit_on_tab"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"auto_complete_with_fields"</span>: <span class="pl-c1">false</span>,
@@ -1278,11 +1290,13 @@ body .markdown-body {
     <span class="pl-ent">"auto_complete_trailing_spaces"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"auto_complete_include_snippets"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"auto_complete_include_snippets_when_typing"</span>: <span class="pl-c1">true</span>,
+    <span class="pl-ent">"syntax_detection_size_limit"</span>: <span class="pl-c1">16777216</span>,
     <span class="pl-ent">"ignored_snippets"</span>: [],
-    <span class="pl-ent">"auto_hide_menu"</span>: <span class="pl-c1">false</span>,
+    <span class="pl-ent">"auto_hide_menu"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"auto_hide_tabs"</span>: <span class="pl-c1">false</span>,
-    <span class="pl-ent">"auto_hide_status_bar"</span>: <span class="pl-c1">false</span>,
+    <span class="pl-ent">"auto_hide_status_bar"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"reveal_tabs_with_timeout"</span>: <span class="pl-c1">false</span>,
+    <span class="pl-ent">"reveal_menu"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"hide_pointer_while_typing"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"shift_tab_unindent"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"copy_with_empty_selection"</span>: <span class="pl-c1">true</span>,
@@ -1291,8 +1305,14 @@ body .markdown-body {
     <span class="pl-ent">"close_find_after_find_all"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"close_find_after_replace_all"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"highlight_find_results_in_scrollbar"</span>: <span class="pl-c1">true</span>,
+    <span class="pl-ent">"find_scroll_highlights_limit"</span>: <span class="pl-c1">8192</span>,
+    <span class="pl-ent">"find_highlight_matches_max_size"</span>: <span class="pl-c1">16777216</span>, 
+    <span class="pl-ent">"find_regex_highlight_matches_max_size"</span>: <span class="pl-c1">1048576</span>, 
+    <span class="pl-ent">"find_in_files_max_result_size"</span>: <span class="pl-c1">16777216</span>, 
+    <span class="pl-ent">"find_in_files_max_file_size"</span>: <span class="pl-c1">104857600</span>, 
     <span class="pl-ent">"drag_text"</span>: <span class="pl-c1">true</span>,
-    <span class="pl-ent">"theme"</span>: <span class="pl-s"><span class="pl-pds">"</span>Adaptive.sublime-theme<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"focus_on_file_drop"</span>: <span class="pl-c1">false</span>,
+    <span class="pl-ent">"theme"</span>: <span class="pl-s"><span class="pl-pds">"</span>Default Dark.sublime-theme<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"light_theme"</span>: <span class="pl-s"><span class="pl-pds">"</span>Default.sublime-theme<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"dark_theme"</span>: <span class="pl-s"><span class="pl-pds">"</span>Default Dark.sublime-theme<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"themed_title_bar"</span>: <span class="pl-c1">true</span>,
@@ -1308,28 +1328,35 @@ body .markdown-body {
     <span class="pl-ent">"adaptive_dividers"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"popup_shadows"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"native_tabs"</span>: <span class="pl-s"><span class="pl-pds">"</span>system<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"open_tabs_after_current"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"overlay_scroll_bars"</span>: <span class="pl-s"><span class="pl-pds">"</span>system<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"enable_tab_scrolling"</span>: <span class="pl-c1">true</span>,
-    <span class="pl-ent">"hide_tab_scrolling_buttons"</span>: <span class="pl-c1">false</span>,
-    <span class="pl-ent">"hide_new_tab_button"</span>: <span class="pl-c1">false</span>,
+    <span class="pl-ent">"hide_tab_scrolling_buttons"</span>: <span class="pl-c1">true</span>,
+    <span class="pl-ent">"hide_new_tab_button"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"show_sidebar_button"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"show_git_status_in_status_bar"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"show_encoding"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"show_line_endings"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"show_indentation"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"show_syntax"</span>: <span class="pl-c1">true</span>,
+    <span class="pl-ent">"show_line_column"</span>: <span class="pl-s"><span class="pl-pds">"</span>enabled<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"show_spelling_errors"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"ui_scale"</span>: <span class="pl-c1">0.0</span>,
     <span class="pl-ent">"hardware_acceleration"</span>: <span class="pl-s"><span class="pl-pds">"</span>none<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"hot_exit"</span>: <span class="pl-c1">false</span>,
+    <span class="pl-ent">"hot_exit_projects"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"remember_full_screen"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"remember_workspace"</span>: <span class="pl-c1">false</span>,
+    <span class="pl-ent">"remember_layout"</span>: <span class="pl-c1">false</span>,
+    <span class="pl-ent">"update_system_recent_files"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"shell_environment"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"reload_file_on_change"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"always_prompt_for_file_reload"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"close_deleted_files"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"open_files_in_new_window"</span>: <span class="pl-s"><span class="pl-pds">"</span>never<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"create_window_at_startup"</span>: <span class="pl-c1">true</span>,
-    <span class="pl-ent">"show_navigation_bar"</span>: <span class="pl-c1">true</span>,
+    <span class="pl-ent">"show_navigation_bar"</span>: <span class="pl-c1">false</span>,
+    <span class="pl-ent">"use_find_clipboard"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"close_windows_when_empty"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"show_full_path"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"show_rel_path"</span>: <span class="pl-c1">false</span>,
@@ -1341,6 +1368,7 @@ body .markdown-body {
     <span class="pl-ent">"git_diff_target"</span>: <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span>,
     <span class="pl-ent">"sublime_merge_path"</span>: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
     <span class="pl-ent">"preview_on_click"</span>: <span class="pl-c1">true</span>,
+    <span class="pl-ent">"select_across_groups"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"console_max_history_lines"</span>: <span class="pl-c1">0</span>,
     <span class="pl-ent">"folder_exclude_patterns"</span>: [<span class="pl-s"><span class="pl-pds">"</span>.svn<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>.git<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>.hg<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>CVS<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>.Trash<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>.Trash-*<span class="pl-pds">"</span></span>],
     <span class="pl-ent">"file_exclude_patterns"</span>: [<span class="pl-s"><span class="pl-pds">"</span>*.pyc<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.pyo<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.exe<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.dll<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.obj<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>*.o<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.a<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.lib<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.so<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.dylib<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.ncb<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.sdf<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.suo<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.pdb<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.idb<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>.DS_Store<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>.directory<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>desktop.ini<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.class<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.psd<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.db<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>*.sublime-workspace<span class="pl-pds">"</span></span>],
@@ -1350,12 +1378,13 @@ body .markdown-body {
     <span class="pl-ent">"index_exclude_gitignore"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"index_skip_unknown_extensions"</span>: <span class="pl-c1">true</span>,
     <span class="pl-ent">"index_exclude_patterns"</span>: [<span class="pl-s"><span class="pl-pds">"</span>*.log<span class="pl-pds">"</span></span>],
+    <span class="pl-ent">"goto_anything_exclude_gitignore"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"vintage_start_in_command_mode"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"vintage_use_clipboard"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"vintage_ctrl_keys"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"relative_line_numbers"</span>: <span class="pl-c1">false</span>,
     <span class="pl-ent">"ignored_packages"</span>: [
-    ]
+    ],
 }</pre></div>
 <hr>
 <h3><a id="user-content-三插件安装" class="anchor" aria-hidden="true" href="#三插件安装"><span aria-hidden="true" class="octicon octicon-link"></span></a>三、插件安装</h3>
