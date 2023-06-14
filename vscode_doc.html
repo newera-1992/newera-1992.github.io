@@ -977,6 +977,10 @@ body .markdown-body {
 .markdown-body .pl-12 {
   padding-left: 128px!important;
 }
+/*
+    适用: Sublime/MarkdownPreview > Save to HTML;
+    (主题风格参考: Sublime/Mariana)
+*/
   /*
     1. 原始HTML修改
   */
@@ -1100,81 +1104,129 @@ body .markdown-body {
       text-decoration: none;
       font-weight: bold;
     }
-</style><title>vscode_doc</title></head><body><article class="markdown-body"><h1><a id="user-content-vscode-settings" class="anchor" aria-hidden="true" href="#vscode-settings"><span aria-hidden="true" class="octicon octicon-link"></span></a>VSCode Settings</h1>
+  /* 配套 toc标签 */
+    /*
+      <div id="toc">
+        <h3 id="toc-title">其它文档列表</h3>
+        <div class="li-hr"></div>
+        <p><a class="a-li" href="index.html">Sublime Settings</a></p>
+        <p><a class="a-li" href="vscode_doc.html">VSCode Settings</a></p>
+        <p><a class="a-li" href="#">a3f1-6a095cf2fcf0</a></p>
+        <p><a class="a-li" href="#">b07d-6aec2cc89499</a></p>
+      </div>
+    */
+</style><title>vscode码农设置</title></head><body><article class="markdown-body"><h1><a id="user-content-vscode-settings" class="anchor" aria-hidden="true" href="#vscode-settings"><span aria-hidden="true" class="octicon octicon-link"></span></a>VSCode码农设置</h1>
 <hr>
-    <div id="toc">
-      <h3 id="toc-title">其它文档列表</h3>
-      <div class="li-hr"></div>
-      <p><a class="a-li" href="index.html">Sublime Settings</a></p>
-      <p><a class="a-li" href="vscode_doc.html">VSCode Settings</a></p>
-      <p><a class="a-li" href="#">a3f1-6a095cf2fcf0</a></p>
-      <p><a class="a-li" href="#">b07d-6aec2cc89499</a></p>
-    </div>
+  <div id="toc">
+    <h3 id="toc-title">其它文档列表</h3>
+    <div class="li-hr"></div>
+    <p><a class="a-li" href="index.html">Sublime Settings</a></p>
+    <p><a class="a-li" href="vscode_doc.html">VSCode Settings</a></p>
+    <p><a class="a-li" href="#">a3f1-6a095cf2fcf0</a></p>
+    <p><a class="a-li" href="#">b07d-6aec2cc89499</a></p>
+  </div>
+<h3><a id="user-content-contact" class="anchor" aria-hidden="true" href="#contact"><span aria-hidden="true" class="octicon octicon-link"></span></a>contact</h3>
+<blockquote>
+<p>电子邮箱</p>
+</blockquote>
+<p>author: ilcode //{i=i,l=love (i love code)} {i=0,l=1 (01code)}</p>
+<p>email: <code>ilcode@foxmail.com</code></p>
+<hr>
 <h3><a id="user-content-一全局设置" class="anchor" aria-hidden="true" href="#一全局设置"><span aria-hidden="true" class="octicon octicon-link"></span></a>一、全局设置</h3>
 <blockquote>
-<p>程序员标准设置</p>
+<p>个人使用的 vscode设置</p>
 </blockquote>
 <table>
 <thead>
 <tr>
-<th>option</th>
-<th>desc</th>
+<th>说明</th>
+<th>设置项</th>
+<th>值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>trust</td>
-<td>false</td>
+<td>开发规范</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
-<td>font size</td>
-<td>24</td>
-</tr>
-<tr>
+<td>  换行符</td>
 <td>eol</td>
 <td>\n</td>
 </tr>
 <tr>
+<td>  字符集</td>
 <td>encoding</td>
 <td>utf-8</td>
 </tr>
 <tr>
-<td>insert spaces</td>
-<td>true</td>
-</tr>
-<tr>
+<td>  缩进长度</td>
 <td>tab size</td>
 <td>4</td>
 </tr>
 <tr>
-<td>word wrap</td>
+<td>  缩进插入空格</td>
+<td>insert spaces</td>
+<td>true</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>个人风格</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>  关闭信任区</td>
+<td>trust</td>
 <td>false</td>
 </tr>
 <tr>
-<td>copy line down</td>
-<td>ctrl+shift+d</td>
-</tr>
-<tr>
-<td>startup</td>
-<td>false</td>
-</tr>
-<tr>
+<td>  关闭欢迎页</td>
 <td>welcome</td>
 <td>false</td>
 </tr>
 <tr>
-<td>history</td>
-<td>all = 0</td>
+<td>  关闭自动打开</td>
+<td>startup</td>
+<td>false</td>
 </tr>
 <tr>
+<td>  关闭自动换行</td>
+<td>word wrap</td>
+<td>false</td>
+</tr>
+<tr>
+<td>  关闭历史记录</td>
+<td>history</td>
+<td>false</td>
+</tr>
+<tr>
+<td>  关闭打开上次文件</td>
 <td>reopen</td>
 <td>false</td>
 </tr>
 <tr>
+<td>  关闭更新</td>
 <td>update</td>
 <td>false</td>
 </tr>
 <tr>
+<td>  字体风格</td>
+<td>font</td>
+<td>consolas</td>
+</tr>
+<tr>
+<td>  字体大小</td>
+<td>font size</td>
+<td>18</td>
+</tr>
+<tr>
+<td>  关闭中文显示边框</td>
 <td>chs font border</td>
 <td>false</td>
 </tr>
@@ -1188,9 +1240,9 @@ body .markdown-body {
 <table>
 <thead>
 <tr>
-<th>name</th>
-<th>author</th>
-<th>desc</th>
+<th>插件名</th>
+<th>作者</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
@@ -1259,8 +1311,8 @@ body .markdown-body {
 <table>
 <thead>
 <tr>
-<th>name</th>
-<th>desc</th>
+<th>插件名</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
@@ -1282,7 +1334,7 @@ body .markdown-body {
 </tr>
 <tr>
 <td>Prettier</td>
-<td>command &gt; format with &gt; Prettier(无效再选择对应语言)</td>
+<td>command &gt; format with &gt; Prettier</td>
 </tr>
 <tr>
 <td>XML Formatter</td>
@@ -1341,10 +1393,4 @@ body .markdown-body {
 		<span class="pl-ent">"description"</span>: <span class="pl-s"><span class="pl-pds">"</span>生成Java空模板<span class="pl-pds">"</span></span>
 	}
 }</pre></div>
-<hr>
-<h3><a id="user-content-contact" class="anchor" aria-hidden="true" href="#contact"><span aria-hidden="true" class="octicon octicon-link"></span></a>contact</h3>
-<blockquote>
-<p>feedback</p>
-</blockquote>
-<p>email: <code>ilcode@foxmail.com</code></p>
 </article></body></html>
